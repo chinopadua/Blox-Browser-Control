@@ -7,18 +7,18 @@
 		<title>Blox Browser Control</title>
 		<meta name="author" content="chino padua">
 		<!-- Favicon--> 
-		<link rel="shortcut icon" href="images/favicon3.png">
+		<link rel="shortcut icon" href="static/images/favicon3.png">
 		<!-- Base--> 
-		<link rel="stylesheet" href="css/chino.css"> 
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-	    <link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="static/css/chino.css"> 
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="static/css/bootstrap.css">
 	    <!-- Components--> 
-		<link rel="stylesheet" href="css/demo.css">
-		<link rel="stylesheet" href="css/component.css">
+		<link rel="stylesheet" href="static/css/demo.css">
+		<link rel="stylesheet" href="static/css/component.css">
 		<!-- Icons--> 
-    	<link rel="stylesheet" type="text/css" href="font-awesome-4.2.0/css/font-awesome.min.css">
-    	<link rel="stylesheet" type="text/css" href="font-awesome-4.2.0/css/font-awesome-animation.min.css">
-		<script src="js/modernizr.custom.js"></script>
+    	<link rel="stylesheet" type="text/css" href="static/font-awesome-4.2.0/css/font-awesome.min.css">
+    	<link rel="stylesheet" type="text/css" href="static/font-awesome-4.2.0/css/font-awesome-animation.min.css">
+		<script src="static/js/modernizr.custom.js"></script>
 	</head>
 	<body>
 	<!--Lower Menu-->
@@ -38,7 +38,7 @@
 					<a href="https://twitter.com/bloxph" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
 					<a href="https://instagram.com/bloxph" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
 					<a href="#"><i class="fa fa-fw fa-question-circle"></i></a>
-					<a href="power.html"><i class="fa fa-fw fa-power-off"></i></a>
+					<a href="#power" data-toggle="modal"><i class="fa fa-fw fa-power-off"></i></a>
 				</div>
 			</nav>
 		</div>
@@ -50,7 +50,7 @@
 		<!-- Main Side Menu -->
 		<div class="st-pusher">
 			<nav class="st-menu st-effect-7" id="menu-7">
-				<h2><img src="images/blox_logo.png" class="navbar-brand-logo page-scroll marginleft50"></h2>
+				<h2><img src="static/images/blox_logo.png" class="navbar-brand-logo page-scroll marginleft50"></h2>
 				<ul>
 					<li><a href="index.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
 					<li><a href="#"><i class="fa fa-video-camera"></i> Videos</a></li>
@@ -58,7 +58,7 @@
 					<li><a href="albums.html"><i class="fa fa-picture-o"></i> Pictures</a></li>
 					<li><a href="#"><i class="fa fa-cube"></i> Connect Using</a></li>
 					<li><a href="#"><i class="fa fa-share-alt"></i> Share Files</a></li>
-					<li><a href="#"><i class="fa fa-power-off"></i> Power</a></li>
+					<li><a href="#power" data-toggle="modal"><i class="fa fa-power-off"></i> Power</a></li>
 				</ul>
 			</nav>
 
@@ -74,18 +74,18 @@
 					<div class="container demo-1">
 					<!-- a low-tech hack for pre-loading the images -->
 					<div class="preload" style="overflow: hidden; width: 0px; height: 0px">
-						<img src="images/browsercontrolpic1.jpg" />
-						<img src="images/browsercontrolpic2.jpg" />
-						<img src="images/browsercontrolpic3.jpg" />
-						<img src="images/browsercontrolpic3r.jpg" />
-						<img src="images/browsercontrolpic4.jpg" />
-						<img src="images/browsercontrolpic4r.jpg" />
+						<img src="static/images/browsercontrolpic1.jpg" />
+						<img src="static/images/browsercontrolpic2.jpg" />
+						<img src="static/images/browsercontrolpic3.jpg" />
+						<img src="static/images/browsercontrolpic3r.jpg" />
+						<img src="static/images/browsercontrolpic4.jpg" />
+						<img src="static/images/browsercontrolpic4r.jpg" />
 					</div>
 					<div class="main clearfix">
 						<div class="md-slider">
 							<div class="md-device-wrapper">
 								<div class="md-device md-device-1">
-									<a href="#"><img src="images/browsercontrolpic1.jpg" /></a>
+									<a href="#"><img src="static/images/browsercontrolpic1.jpg" /></a>
 									<div class="md-border-element"></div>
 									<div class="md-base-element"></div>
 								</div>
@@ -102,20 +102,35 @@
 		</div><!-- /st-content-pusher -->
 	</div><!-- /st-container -->
 
-		<script src="js/jquery-min.js"></script>
+
+	<!-- Modal Power -->
+<div class="modal fade" id="power" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  		<header class="codrops-header">
+			<h1>Blox Power Control<span>The power is yours, choose wisely</span></h1>	
+		</header>
+    	<div class="powerbuttons">
+            <a href="#" class="marginleft10 marginright10"><i class="fa fa-refresh fa-4x power"></i></i></a>
+            <a href="#" class="marginleft10 marginright10"><i class="fa fa-power-off fa-4x power"></i></a>
+        </div>
+  </div>
+</div>
+<!-- //Modal Power --> 
+
+		<script src="static/js/jquery-min.js"></script>
 
 		<!-- Exclusive for Dashboard -->
-		<script src="js/morphingdevice.js"></script>
+		<script src="static/js/morphingdevice.js"></script>
 		<script>
 			var el = document.querySelector( '.md-slider' ),
 				settings = {
 					autoplay : true,
 					interval : 3000,
 					devices : [ 
-						{ cName : 'md-device-1', canRotate : false, imgsrc : 'images/browsercontrolpic1.jpg' },
-						{ cName : 'md-device-2', canRotate : false, imgsrc : 'images/browsercontrolpic2.jpg' },
-						{ cName : 'md-device-3', canRotate : true, imgsrc : 'images/browsercontrolpic3.jpg', rotatedsrc : 'images/browsercontrolpic3r.jpg' },
-						{ cName : 'md-device-4', canRotate : true, imgsrc : 'images/browsercontrolpic4.jpg', rotatedsrc : 'images/browsercontrolpic4r.jpg' }
+						{ cName : 'md-device-1', canRotate : false, imgsrc : 'static/images/browsercontrolpic1.jpg' },
+						{ cName : 'md-device-2', canRotate : false, imgsrc : 'static/images/browsercontrolpic2.jpg' },
+						{ cName : 'md-device-3', canRotate : true, imgsrc : 'static/images/browsercontrolpic3.jpg', rotatedsrc : 'static/images/browsercontrolpic3r.jpg' },
+						{ cName : 'md-device-4', canRotate : true, imgsrc : 'static/images/browsercontrolpic4.jpg', rotatedsrc : 'static/images/browsercontrolpic4r.jpg' }
 					]
 				},
 				devicesTotal = settings.devices.length,
@@ -153,8 +168,9 @@
 		</script><!-- //Exclusive for Dashboard -->
 
 		<!-- JS Base -->
-		<script src="js/classie.js"></script>
-		<script src="js/sidebarEffects.js"></script>
-		<script src="js/main.js"></script>
+		<script src="static/js/classie.js"></script>
+		<script src="static/js/sidebarEffects.js"></script>
+		<script src="static/js/main.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
 	</body>
 </html>
